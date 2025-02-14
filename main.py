@@ -9,4 +9,15 @@ def count():
         words = file_contents.split()
     print(len(words))
 
-count()
+def char_count():
+    char_dict = {}
+    with open("books/frankenstein.txt") as f:
+        file_contents = f.read()
+        file_contents_lower = file_contents.lower()
+        for char in file_contents_lower:
+            if char not in char_dict:
+                char_dict[char] = 1
+            else:
+                char_dict[char] += 1
+    print(char_dict)
+char_count()
