@@ -19,5 +19,9 @@ def char_count():
                 char_dict[char] = 1
             else:
                 char_dict[char] += 1
-    print(char_dict)
+        for key in char_dict:
+            if key.isalpha() == True:
+                print(f"The '{key}' character was found {char_dict[key]} times")
+    return char_dict
+
 char_count()
